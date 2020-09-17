@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="149.0" prefWidth="95.0" spacing="15.0">
+         <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonAction" text="Zapisz" />
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonAction" text="Dodaj " />
+            <Button fx:id="reportButton" mnemonicParsing="false" onAction="#reportButtonAction" text="Raport" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <TableView fx:id="table" layoutX="109.0" layoutY="24.0" prefHeight="443.0" prefWidth="227.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Imię" />
+          <TableColumn fx:id="surnameColumn" prefWidth="75.0" text="Nazwisko" />
+            <TableColumn fx:id="roomColumn" prefWidth="75.0" text="Pokój" />
+            <TableColumn fx:id="startTime" prefWidth="75.0" text="startTime" visible="false" />
+            <TableColumn fx:id="endTime" prefWidth="75.0" text="endTime" visible="false" />
+        </columns>
+      </TableView>
+      <VBox layoutX="362.0" layoutY="24.0" prefHeight="200.0" prefWidth="115.0">
+         <children>
+            <Label text="Imię" />
+            <TextField fx:id="nameTextField" />
+            <Label text="Nazwisko" />
+            <TextField fx:id="surnameTextField" />
+            <Label text="Numer pokoju" />
+            <TextField fx:id="roomNumberTextField" />
+         </children>
+      </VBox>
+      <VBox layoutX="529.0" layoutY="24.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="111.0" text="Godz. rozp. pracy" />
+            <TextField fx:id="startTimeTextField" />
+            <Label prefHeight="17.0" prefWidth="96.0" text="Godz. zako. pracy" />
+            <TextField fx:id="ednTimeTextField" />
+         </children>
+      </VBox>
+      <Label fx:id="roomLabel" contentDisplay="CENTER" layoutX="371.0" layoutY="246.0" prefHeight="148.0" prefWidth="272.0" text="Label" textAlignment="CENTER" textFill="#15e835" visible="false" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
